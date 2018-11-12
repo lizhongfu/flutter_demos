@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:english_words/english_words.dart';
 
+//http://doc.flutter-dev.cn/get-started/codelab/
+
 void main() => runApp(new MyApp());
 
 class MyApp extends StatelessWidget {
@@ -29,6 +31,8 @@ class RandomWords extends StatefulWidget {
 class RandomWordsState extends State<RandomWords> {
   @override
   Widget build(BuildContext context) {
+
+
     final wordPair = new WordPair.random();
     return new Text(wordPair.asPascalCase);
   }

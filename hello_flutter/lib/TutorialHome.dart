@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hello_flutter/MyButton.dart';
+import 'package:hello_flutter/Counter.dart';
 
 class TutorialHome extends StatelessWidget {
   @override
@@ -19,13 +20,11 @@ class TutorialHome extends StatelessWidget {
               tooltip: "Search",
               onPressed: null
           ),
-          new MyButton(
-
-          ),
+          new MyButton(),
         ],
       ),
       body: new Center(
-        child: new Text("Hello~~~~"),
+        child: new Counter(),
       ),
       floatingActionButton: new FloatingActionButton(
         tooltip: "Add",

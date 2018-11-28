@@ -26,11 +26,11 @@ class TutorialHome extends StatelessWidget {
       body: new Center(
         child: new Counter(),
       ),
-      floatingActionButton: new FloatingActionButton(
-        tooltip: "Add",
-        child: new Icon(Icons.add),
-        onPressed: null,
-      ),
+//      floatingActionButton: new FloatingActionButton(
+//        tooltip: "Add",
+//        child: new Icon(Icons.add),
+//        onPressed: null,
+//      ),
     );
   }
 }

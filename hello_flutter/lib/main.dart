@@ -9,8 +9,14 @@ void main() {
   runApp(
     new MaterialApp(
       title: "MyApp",
-      //home: new MyScaffold(),
-      home: new TutorialHome(),
+      home: new MyScaffold(),
+//      home: new TutorialHome(),
     ),
+//      new Center(
+//        child: new Text(
+//          'Hello, world!',
+//          textDirection: TextDirection.ltr,
+//        ),
+//      ),
   );
 }

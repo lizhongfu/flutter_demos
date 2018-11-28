@@ -41,9 +41,10 @@ class _CounterState extends State<Counter> {
 
   @override
   Widget build(BuildContext context) {
-    return new Row(children: <Widget>[
-      new CounterIncrementor(onPressed: _increment),
-      new CounterDisplay(count: _counter),
-    ]);
+    return new Row(
+        children: <Widget>[
+          new CounterIncrementor(onPressed: _increment),
+          new CounterDisplay(count: _counter),
+        ]);
   }
 }

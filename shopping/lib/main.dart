@@ -13,6 +13,9 @@ class ShoppingList extends StatefulWidget {
 
   @override
   _ShoppingListState createState() => new _ShoppingListState();
+//  当这个widget的父级重建时，父级将创建一个新的ShoppingList实例，但是
+// Flutter框架将重用已经在树中的_ShoppingListState实例，而不是再次调用
+// createState创建一个新的。
 }
 
 class _ShoppingListState extends State<ShoppingList> {
@@ -23,7 +26,7 @@ class _ShoppingListState extends State<ShoppingList> {
       // When user changes what is in the cart, we need to change _shoppingCart
       // inside a setState call to trigger a rebuild. The framework then calls
       // build, below, which updates the visual appearance of the app.
-
+      //为了通知框架它改变了它的内部状态，需要调用setState。调用widget的build方法
       if (inCart)
         _shoppingCart.add(product);
       else
@@ -39,7 +42,7 @@ class _ShoppingListState extends State<ShoppingList> {
       ),
       body: new ListView(
         padding: new EdgeInsets.symmetric(vertical: 8.0),
-        children: widget.products.map((Product product) {
+        children: widget.products.map((Product product) { //要访问当前ShoppingList的属性，_ShoppingListState可以使用它的widget属性
           return new ShoppingListItem(
             product: product,
             inCart: _shoppingCart.contains(product),

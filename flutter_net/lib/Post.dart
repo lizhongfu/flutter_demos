@@ -5,19 +5,15 @@ import 'dart:convert';
 import 'package:flutter_net/Post.dart';
 
 class Post {
-  final int userId;
-  final int id;
-  final String title;
-  final String body;
+  final String name;
+  final String email;
 
-  Post({this.userId, this.id, this.title, this.body});
+  Post({this.name, this.email});
 
   factory Post.fromJson(Map<String, dynamic> json) {
     return new Post(
-      userId: json['userId'],
-      id: json['id'],
-      title: json['title'],
-      body: json['body'],
+      name: json['name'],
+      email: json['email'],
     );
   }
 }

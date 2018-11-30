@@ -39,7 +39,7 @@ class MyApp extends StatelessWidget {
             future: fetchPost(),
             builder: (context, snapshot) {
               if (snapshot.hasData) {
-                return new Text(snapshot.data.title);
+                return new Text(snapshot.data.name);
               } else if (snapshot.hasError) {
                 return new Text("${snapshot.error}");
               }

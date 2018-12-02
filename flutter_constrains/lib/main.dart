@@ -1,7 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:path/path.dart';
+import 'dart:async' show Future;
+import 'package:flutter/services.dart' show rootBundle;
+import 'package:flutter/rendering.dart';
 
-void main() => runApp(MyApp());
+void main() {
+//  debugPaintSizeEnabled=true;
+  runApp(MyApp());
+}
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
@@ -27,7 +33,7 @@ class MyApp extends StatelessWidget {
         body: new ListView(
           children: <Widget>[
             new Image.asset(
-              'lake.png',
+              'images/lake.png',
               width: 600.0,
               height: 240.0,
               fit: BoxFit.cover,
@@ -104,9 +110,7 @@ class SomeButton extends StatelessWidget {
   }
 
   Column _buildButtonColumn(BuildContext context, IconData icon, String label) {
-    Color color = Theme
-        .of(context)
-        .primaryColor;
+    Color color = Theme.of(context).primaryColor;
 
     return new Column(
       mainAxisSize: MainAxisSize.min,
